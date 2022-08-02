@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--localStorage在永久有效
+    同意浏览器多窗口可以共享
+-->
+<body>
+<div>
+    <input type="text" name="" id="">
+    <button class="set">存储数据</button>
+    <button class="get">获取数据</button>
+    <button class="remove">删除数据</button>
+    <button class="del">清空数据</button>
+</div>
+<script>
+    let div = document.querySelector('div')
+    let input = document.querySelector('input')
+    let set = document.querySelector('.set')
+    let get = document.querySelector('.get')
+    let remove = document.querySelector('.remove')
+    let del = document.querySelector('.del')
+    // 存入储存
+    set.addEventListener('click', function () {
+        let value = input.value
+        localStorage.setItem('uname', value)
+    })
+    //获取本地储存
+    get.addEventListener('click', function () {
+        let uname = localStorage.getItem('uname')
+        let span = document.createElement('span')
+        span.innerHTML = uname
+        div.appendChild(span)
+    })
+    //删除本地储存
+    remove.addEventListener('click', function () {
+        localStorage.removeItem('uname')
+    })
+    //清空本地储存
+    del.addEventListener('click', function () {
+        localStorage.clear()
+    })
+</script>
+</body>
+
+</html>

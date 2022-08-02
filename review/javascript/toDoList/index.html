@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="../JQuery/jQuery.js"></script>
+    <script src="todolist.js"></script>
+</head>
+<body>
+<header>
+    <section>
+        <label for="title">ToDoList</label>
+        <input type="text" name="title" id="title" placeholder="添加ToDo" required>
+    </section>
+</header>
+<section>
+    <h2>正在进行 <span id="todoCount"></span></h2>
+    <ol id="todolist" class="demo-box"></ol>
+    <h2>已经完成 <span id="doneCount"></span></h2>
+    <ul id="donelist" class="demo-box"></ul>
+</section>
+<footer>
+    Copyright &copy; 2014 todolist.cn
+</footer>
+</body>
+</html>

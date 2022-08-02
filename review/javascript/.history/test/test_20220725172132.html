@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拟态框实现</title>
+    <style>
+        .login-header {
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        
+        #link {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .login {
+            position: fixed;
+            border: #ebebeb solid 1px;
+            width: 450px;
+            height: 300px;
+            background-color: white;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+        }
+        
+        .login-title {
+            position: relative;
+            width: 100%;
+            margin: 10px 0 0 0;
+            text-align: center;
+            line-height: 40px;
+            height: 40px;
+            font-size: 18px;
+        }
+        
+        span a {
+            text-decoration: none;
+            color: black;
+            position: absolute;
+            right: 0;
+            top: -10px;
+            display: block;
+            width: 50px;
+            border: black solid 1px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .login-input {
+            text-align: right;
+            margin: 40px 80px;
+            font-weight: 800;
+        }
+        
+        .login-input input {
+            border: solid 1px #eeeeee;
+            line-height: 25px;
+            outline: none;
+        }
+        
+        .login-button {
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%);
+            text-align: center;
+            width: 200px;
+            border: 1px solid #888888;
+        }
+        
+        .login-button a {
+            text-decoration: none;
+            color: black;
+            font-weight: 400;
+        }
+        
+        .login-bg {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .3)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-header">
+        <a href="javascript:;" id="link">点我，弹出登录框</a>
+    </div>
+    <div class="login" id="login">
+        <div id="title" class="login-title">登陆会员
+            <span><a href="javascript:;" id="closeBtn" class="close-login">关闭</a></span>
+        </div>
+        <div class="login-input-content">
+            <div class="login-input">
+                <label for="uname">用户名：</label>
+                <input type="text" id="uname" name="info[username]" placeholder="请输入用户名">
+            </div>
+            <div class="login-input">
+                <label>密码：</label>
+                <input type="password" name="psw" id="psw" placeholder="请输入密码">
+            </div>
+            <div id="loginBtn" class="login-button"><a href="javascript:;">登录会员</a></div>
+        </div>
+    </div>
+    <div class="login-bg" id="bg"></div>
+    <script>
+        let closeBtn = document.querySelector('.close-login')
+        let login = document.querySelector('.login')
+        let mask = document.querySelector('.login-bg')
+        let link = document.querySelector('#link')
+        link.addEventListener('click', function() {
+            login.style.display = 'block'
+            mask.style.display = 'block'
+        })
+        closeBtn.addEventListener('click', function() {
+            login.style.display = 'none'
+            mask.style.display = 'none'
+        })
+        t
+    </script>
+</body>
+
+</html>

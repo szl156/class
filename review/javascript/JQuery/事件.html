@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+    <script src="jQuery.js"></script>
+</head>
+<body>
+<div></div>
+<script>
+    $(function () {
+        // 事件注册
+        // $('div').click(function () {
+        //     $(this).css('background', "Purple")
+        // })
+        // 事件处理 on 绑定多个事件
+        $('div').on({
+            mouseenter: function () {
+                $(this).css('background', "Purple")
+            },
+            click: function () {
+                $(this).css('background', "pink")
+            },
+            mouseleave: function () {
+                $(this).css('background', "skyblue")
+            }
+        })
+        // 事件解绑
+        $("div").off("click")
+    })
+
+
+</script>
+</body>
+</html>

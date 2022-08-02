@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            top: 20;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sliderbar">
+        <span><-</span>
+        <div class="con">问题反馈</div>
+    </div>
+    <script>
+        function animate(obj, target, callback) {
+            obj.timer = setInterval(function() {
+                let step = Math.ceil((target - obj.offsetLeft) / 10)
+                if (obj.offsetLeft >= target) {
+                    clearInterval(obj.timer)
+                    if (callback) {
+                        callback()
+                    }
+                }
+                obj.style.left = obj.offsetLeft + step + 'px'
+            }, 40)
+        }
+    </script>
+</body>
+
+</html>

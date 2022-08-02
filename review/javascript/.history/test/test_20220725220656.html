@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            top: 20;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn500">move to 500</button>
+    <button class="btn800">move to 800</button>
+    <div>
+        傻蛋刘大润
+    </div>
+    <script>
+        const btn500 = document.querySelector('.btn500')
+        const btn800 = document.querySelector('.btn800')
+        const div = document.querySelector('div')
+
+        function animate(obj, target) {
+            obj.timer = setInterval(function() {
+                let step = Math.ceil((target - obj.offsetLeft) / 10)
+                if (obj.offsetLeft >= target) {
+                    clearInterval(obj.timer)
+                }
+                obj.style.left = obj.offsetLeft + step + 'px'
+            }, 40)
+        }
+        btn500.addEventListener('click', function() {
+            animate(div, 500)
+        })
+        btn800.addEventListener('click', function() {
+            animate(div, 800)
+        })
+    </script>
+</body>
+
+</html>

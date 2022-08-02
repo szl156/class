@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<button>点击发送</button>
+<button>点击取消</button>
+<script>
+    const btns = document.querySelectorAll("button")
+    let xhr = new XMLHttpRequest()
+    btns[0].onclick = function () {
+        xhr.open('get', "http://127.0.0.1:8000/delay")
+        xhr.send()
+    }
+    btns[1].onclick = function () {
+        xhr.abort()
+    }
+</script>
+</body>
+</html>

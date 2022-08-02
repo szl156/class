@@ -1,0 +1,7 @@
+.fl {
+    float: left;
+}
+
+.fl i {
+    transform: rotate(20deg);
+}

@@ -1,0 +1,21 @@
+//运算符左右必须有空格
+//两个数参与运算以第一个为准
+
+@basefont: 100px;
+@color: red;
+@border: 10px+10;
+body {
+  font-size: @basefont / 2;
+
+  div {
+    display: inline-block;
+    width: 300px * 2;
+    height: 300px * 2;
+    background-color: @color;
+    border: @border solid deepskyblue;
+
+    &:hover {
+      background-color: greenyellow;
+    }
+  }
+}

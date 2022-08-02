@@ -1,0 +1,14 @@
+body {
+  font-size: 100px / 2;
+}
+body div {
+  display: inline-block;
+  width: 600px;
+  height: 600px;
+  background-color: red;
+  border: 20px solid deepskyblue;
+}
+body div:hover {
+  background-color: greenyellow;
+}
+/*# sourceMappingURL=final-test.css.map */

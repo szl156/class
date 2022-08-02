@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jQuery.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    //在页面加载完毕以后调用函数(入口函数)
+    // 法1
+    // $(document).ready(function () {
+    //     $('div').hide()
+    // })
+    // // 法2
+    // $(function () {
+    //     $('div').hide()
+    // })
+
+
+    // Dom对象和jQuery对象(jQuery对象只能使用jQuery方法，Dom对象只能使用原生JS属性和方法)
+    // Dom对象：用原生js获取的对象
+    // let Div = document.querySelector('div')
+    // console.dir(Div)
+    // jQuery对象，用jQuery方式获取的对象
+    // console.dir($('div'))
+
+
+    // Dom对象和jQuery对象的转换
+    // Dom转jQuery
+    // $(Div)
+    // jQuery转Dom
+    // console.dir($(Div)[0].offsetWidth)
+</script>
+
+</body>
+</html>

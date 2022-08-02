@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式计算器</title>
+    <style>
+        .btnGroup>button.active {
+            background-color: orange;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="computed">
+        <div class="result">0</div>
+        <div class="inputGroup">
+            <input type="number" class="ipt1" value="0" />
+            <br/>
+            <input type="number" class="ipt2" value="0" />
+        </div>
+        <div class="btnGroup">
+            <button data-field="add" class="active">+</button>
+            <button data-field="sub">-</button>
+            <button data-field="mul">*</button>
+            <button data-field="div">/</button>
+        </div>
+    </div>
+    <!-- 引入js文件 -->
+    <script src="demo.js"></script>
+</body>
+
+</html>
